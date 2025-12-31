@@ -1,37 +1,39 @@
 export default function Projects({ projects }) {
-  if (!projects || projects.length === 0) {
-    return <p>No projects yet.</p>
-  }
+  if (!projects || projects.length === 0) return <p>No projects yet.</p>;
 
   return (
-    <div>
+    <div className="grid">
       {projects.map((project) => {
         const hasLink = Boolean(project.link);
-        const techLine =
+        const tech =
           Array.isArray(project.tech) && project.tech.length > 0
-            ? project.tech.join(", ")
-            : null;
+            ? project.tech
+            : [];
 
         return (
-          <div key={project.name} style={{ marginBottom: "1rem" }}>
-            <div>
+          <article key={project.name} className="card">
+            <div className="card__top">
               {hasLink ? (
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  <strong>{project.name}</strong>
+                <a className="card__titleLink" href={project.link} target="_blank" rel="noreferrer">
+                  <h3 className="card__title">{project.name}</h3>
                 </a>
               ) : (
-                <strong>{project.name}</strong>
+                <h3 className="card__title">{project.name}</h3>
               )}
             </div>
 
-            <p style={{ margin: "0.25rem 0" }}>{project.description}</p>
+            <p className="card__desc">{project.description}</p>
 
-            {techLine ? (
-              <p style={{ margin: 0 }}>
-                <em>Tech:</em> {techLine}
-              </p>
+            {tech.length > 0 ? (
+              <ul className="tags">
+                {tech.map((t) => (
+                  <li key={`${project.name}:${t}`} className="tag">
+                    {t}
+                  </li>
+                ))}
+              </ul>
             ) : null}
-          </div>
+          </article>
         );
       })}
     </div>
