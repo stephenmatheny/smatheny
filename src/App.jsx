@@ -29,7 +29,7 @@ export default function App() {
 
       <Section title="Experience">
         <Experience items={profile.experience} />
-      </Section>;
+      </Section>
 
       <Section title="Projects">
         <Projects projects={profile.projects} />
