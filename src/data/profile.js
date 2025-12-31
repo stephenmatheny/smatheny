@@ -9,7 +9,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/matheny-stephen/",
   },
   about:
-    "I build software systems with an emphasis on clear architecture, pragmatic design decisions, and long-term maintainability.",
+    "I design and build software systems with an emphasis on clarity, maintainability, and pragmatic decision-making. I focus on writing code that teams can understand, extend, and trust over the long term.",
   skills: ["React", "Laravel", "Inertia", "MySQL/Postgres", "Docker"],
   projects: [
     {
