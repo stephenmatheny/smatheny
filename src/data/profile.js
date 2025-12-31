@@ -3,11 +3,11 @@ export const profile = {
   lastName: "Matheny",
   headline: "Software Engineer building maintainable, data-driven web applications",
   location: "Texas",
-  links: {
-    email: "stephen@smatheny.com",
-    github: "https://github.com/stephenmatheny",
-    linkedin: "https://www.linkedin.com/in/matheny-stephen/",
-  },
+  links: [
+    { text: "Email", value: "stephen@smatheny.com" },
+    { text: "GitHub", value: "https://github.com/stephenmatheny" },
+    { text: "LinkedIn", value: "https://www.linkedin.com/in/matheny-stephen/" },
+  ],
   about:
     "I design and build software systems with an emphasis on clarity, maintainability, and pragmatic decision-making. I focus on writing code that teams can understand, extend, and trust over the long term.",
   skillGroups: [
