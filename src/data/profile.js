@@ -10,7 +10,12 @@ export const profile = {
   },
   about:
     "I design and build software systems with an emphasis on clarity, maintainability, and pragmatic decision-making. I focus on writing code that teams can understand, extend, and trust over the long term.",
-  skills: ["React", "Laravel", "Inertia", "MySQL/Postgres", "Docker"],
+  skillGroups: {
+    frontEnd: ["React", "Inertia", "Vite"],
+    backEnd: ["Laravel", "PHP", "REST APIs"],
+    data: ["MySQL", "PostgreSQL"],
+    tools: ["Docker", "Git", "CI/CD"],
+  },
   projects: [
     {
       name: "ChessQL",
