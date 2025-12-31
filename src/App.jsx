@@ -1,4 +1,5 @@
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
 import Projects from "./components/Projects";
@@ -25,6 +26,10 @@ export default function App() {
       <Section title="Skills">
         <Skills skillGroups={profile.skillGroups} />
       </Section>
+
+      <Section title="Experience">
+        <Experience items={profile.experience} />
+      </Section>;
 
       <Section title="Projects">
         <Projects projects={profile.projects} />
