@@ -1,6 +1,6 @@
 export default function Projects({ projects }) {
   if (!projects || projects.length === 0) {
-    return <p>No projects yet.</p>;
+    return <p>No projects yet.</p>
   }
 
   return (

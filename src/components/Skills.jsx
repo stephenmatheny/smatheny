@@ -1,6 +1,6 @@
 export default function Skills({ skillGroups }) {
   if (!skillGroups || skillGroups.length === 0) {
-    return <p>No skills listed yet.</p>;
+    return <p>No skills listed yet.</p>
   }
 
   return (

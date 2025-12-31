@@ -2,7 +2,7 @@ export default function Contact({ links }) {
   const entries = Object.entries(links || {});
 
   if (entries.length === 0) {
-    return <p>No contact links available.</p>;
+    return <p>No contact links available.</p>
   }
 
   return (
