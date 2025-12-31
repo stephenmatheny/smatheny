@@ -111,7 +111,7 @@ export const profile = {
       description:
         "Platform for managing chess clubs, games, and player ratings.",
       tech: ["Laravel", "React"],
-      link: "https://www.chessql.com",
+      // link: "https://www.chessql.com",
     },
   ],
 };
