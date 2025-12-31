@@ -1,7 +1,7 @@
 export const profile = {
   firstName: "Stephen",
   lastName: "Matheny",
-  headline: "Software Engineer • Educator • Builder",
+  headline: "Software Engineer building maintainable, data-driven web applications",
   location: "Texas",
   links: {
     email: "stephen@smatheny.com",
