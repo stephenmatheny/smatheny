@@ -252,3 +252,72 @@ a:hover { text-decoration: underline; }
   );
   text-decoration: none;
 }
+
+/* ------------------------------
+   Print styles
+-------------------------------- */
+@media print {
+  /* Use white paper, black ink */
+  :root {
+    --bg: #ffffff;
+    --text: #000000;
+    --muted: #111111;
+    --border: rgba(0, 0, 0, 0.15);
+    --link: #000000;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Remove decorative surfaces/shadows */
+  .hero,
+  .card,
+  .skills__group {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  }
+
+  /* Tighten spacing for paper */
+  .page {
+    padding: 0 !important;
+  }
+
+  .container {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .section {
+    margin: 1.25rem 0 !important;
+  }
+
+  p,
+  li {
+    color: #000000 !important;
+  }
+
+  /* Hide icon-only UI that doesn't print well */
+  .contactIcons {
+    display: none !important;
+  }
+
+  /* Optional: show URLs after links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+
+  /* Avoid awkward splits */
+  .hero,
+  .card,
+  .skills__group,
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
