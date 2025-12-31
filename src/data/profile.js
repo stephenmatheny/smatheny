@@ -1,5 +1,6 @@
 export const profile = {
-  name: "Stephen Matheny",
+  firstName: "Stephen",
+  lastName: "Matheny",
   headline: "Software Engineer • Educator • Builder",
   location: "Texas",
   links: {
