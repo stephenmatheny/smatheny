@@ -9,7 +9,7 @@ export default function Header({ firstName, lastName, headline }) {
 
       <div className="hero__actions">
         <a
-          href="/Stephen-Matheny-Resume.pdf"
+          href="/Stephen_Matheny_Full_Stack_Software_Engineer.pdf"
           className="hero__link hero__link--primary"
           target="_blank"
           rel="noreferrer"
