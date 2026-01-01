@@ -61,7 +61,7 @@ export default function Contact({ links }) {
         return (
           <a
             key={link.text}
-            className="iconBtn"
+            className="pill pill--icon"
             href={href}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noreferrer" : undefined}

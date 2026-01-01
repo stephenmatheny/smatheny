@@ -11,23 +11,21 @@ export default function Projects({ projects }) {
             : [];
 
         return (
-          <article key={project.name} className="card">
-            <div className="card__top">
-              {hasLink ? (
-                <a className="card__titleLink" href={project.link} target="_blank" rel="noreferrer">
-                  <h3 className="card__title">{project.name}</h3>
-                </a>
-              ) : (
+          <article key={project.name} className="surface card">
+            {hasLink ? (
+              <a className="card__titleLink" href={project.link} target="_blank" rel="noreferrer">
                 <h3 className="card__title">{project.name}</h3>
-              )}
-            </div>
+              </a>
+            ) : (
+              <h3 className="card__title">{project.name}</h3>
+            )}
 
             <p className="card__desc">{project.description}</p>
 
             {tech.length > 0 ? (
-              <ul className="tags">
+              <ul className="pillList tags">
                 {tech.map((t) => (
-                  <li key={`${project.name}:${t}`} className="tag">
+                  <li key={`${project.name}:${t}`} className="pill tag">
                     {t}
                   </li>
                 ))}

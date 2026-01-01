@@ -4,7 +4,7 @@ export default function Experience({ items }) {
   return (
     <div className="stack">
       {items.map((exp) => (
-        <article key={`${exp.org}:${exp.role}`} className="card card--soft">
+        <article key={`${exp.org}:${exp.role}`} className="surface card card--soft">
           <div className="experience__header">
             <h3 className="experience__org">{exp.org}</h3>
             <span className="experience__dates">{exp.dates}</span>

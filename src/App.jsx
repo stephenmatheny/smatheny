@@ -19,7 +19,7 @@ export default function App() {
         headline={profile.headline}
       />
 
-      <Section title="About">
+      <Section title="About" framed>
         <p>{profile.about}</p>
       </Section>
 

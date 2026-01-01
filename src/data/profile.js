@@ -9,7 +9,7 @@ export const profile = {
     { text: "LinkedIn", value: "https://www.linkedin.com/in/matheny-stephen/" },
   ],
   about:
-    "I design and build software systems with an emphasis on clarity, maintainability, and pragmatic decision-making. I focus on writing code that teams can understand, extend, and trust over the long term.",
+    "Full-stack software engineer with a background in education and experience building production-ready web applications. I enjoy designing systems, automating workflows, and writing clean, maintainable code that scales with real-world use. I am a highly self-directed problem solver who collaborates well with stakeholders and teammates to turn ambiguous requirements into reliable solutions. I consistently invest time in learning new technologies and refining my craft. In my spare time, I build side projects, design math enrichment programs, organize chess events, and spend time with my family.",
   skillGroups: [
     { name: "Frontend", items: ["React", "Inertia", "Vite"] },
     { name: "Backend", items: ["Laravel", "PHP", "REST APIs"] },
@@ -22,12 +22,14 @@ export const profile = {
       role: "Founder",
       dates: "Nov 2023 – Present",
       summary:
-        "Founded a nonprofit software organization building custom, production-ready web applications to streamline workflows for school districts and educators.",
+        "Founded a nonprofit software and education organization delivering production-ready web applications and math enrichment programs to support school districts, educators, and students.",
       bullets: [
         "Designed and developed full-stack web applications using Laravel, React, JavaScript, and REST APIs",
-        "Architected relational databases using MySQL/PostgreSQL, migrations, and Eloquent ORM",
+        "Architected relational databases using MySQL and PostgreSQL with migrations and Eloquent ORM",
         "Collaborated directly with educators and administrators to gather requirements and deliver workflow automation solutions",
         "Led system architecture, deployment strategy, and long-term technical roadmap",
+        "Designed and delivered small-group math enrichment programs focused on conceptual understanding, number sense, and problem-solving",
+        "Created curriculum, assessments, and instructional materials aligned to student skill gaps and learning progressions",
       ],
     },
     {
