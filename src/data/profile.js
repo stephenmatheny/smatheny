@@ -8,8 +8,6 @@ export const profile = {
     { text: "GitHub", value: "https://github.com/stephenmatheny" },
     { text: "LinkedIn", value: "https://www.linkedin.com/in/matheny-stephen/" },
   ],
-  about:
-    "Full-stack software engineer with a background in education and experience building production-ready web applications. I enjoy designing systems, automating workflows, and writing clean, maintainable code that scales with real-world use. I am a highly self-directed problem solver who collaborates well with stakeholders and teammates to turn ambiguous requirements into reliable solutions. I consistently invest time in learning new technologies and refining my craft. In my spare time, I build side projects, design math enrichment programs, organize chess events, and spend time with my family.",
   skillGroups: [
     { name: "Frontend", items: ["React", "Inertia", "Vite"] },
     { name: "Backend", items: ["Laravel", "PHP", "REST APIs"] },

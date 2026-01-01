@@ -1,4 +1,4 @@
-import Contact from "./components/Footer";
+import About from "./components/About";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
@@ -20,7 +20,7 @@ export default function App() {
       />
 
       <Section title="About" framed>
-        <p>{profile.about}</p>
+        <About />
       </Section>
 
       <Section title="Skills">
@@ -34,7 +34,7 @@ export default function App() {
       <Section title="Projects">
         <Projects projects={profile.projects} />
       </Section>
-      
+
     </Layout>
   );
 }
