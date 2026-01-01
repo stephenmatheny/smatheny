@@ -1,4 +1,4 @@
-import Contact from "./components/Contact";
+import Contact from "./components/Footer";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
@@ -34,11 +34,7 @@ export default function App() {
       <Section title="Projects">
         <Projects projects={profile.projects} />
       </Section>
-
-      <Section title="Contact">
-        <Contact links={profile.links} />
-      </Section>
-
+      
     </Layout>
   );
 }

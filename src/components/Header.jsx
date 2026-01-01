@@ -10,11 +10,42 @@ export default function Header({ firstName, lastName, headline }) {
       <div className="hero__actions">
         <a
           href="/Stephen-Matheny-Resume.pdf"
-          className="btn btn--primary"
+          className="hero__link hero__link--primary"
           target="_blank"
           rel="noreferrer"
         >
-          Download Resume
+          View Resume (PDF)
+        </a>
+
+        <span className="hero__divider">·</span>
+
+        <a
+          href="https://github.com/stephenmatheny"
+          className="hero__link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+
+        <span className="hero__divider">·</span>
+
+        <a
+          href="https://www.linkedin.com/in/stephenmatheny"
+          className="hero__link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <span className="hero__divider">·</span>
+
+        <a
+          href="mailto:stephen@smatheny.com"
+          className="hero__link"
+        >
+          Email
         </a>
       </div>
     </header>

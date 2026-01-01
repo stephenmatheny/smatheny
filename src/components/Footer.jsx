@@ -46,32 +46,45 @@ function getIcon(text) {
   return null;
 }
 
-export default function Contact({ links }) {
+export default function Footer({ links }) {
   if (!Array.isArray(links) || links.length === 0) {
-    return <p>No contact links available.</p>;
+    return null;
   }
 
   return (
-    <div className="contactIcons">
-      {links.map((link) => {
-        const href = getHref(link.text, link.value);
-        const isExternal = !href.startsWith("mailto:");
-        const Icon = getIcon(link.text);
+    <footer className="footer">
+      <p className="footer__label">Contact</p>
 
-        return (
-          <a
-            key={link.text}
-            className="pill pill--icon"
-            href={href}
-            target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noreferrer" : undefined}
-            aria-label={link.text}
-            title={link.text}
-          >
-            {Icon ? <Icon className="iconBtn__icon" /> : <span>{link.text}</span>}
-          </a>
-        );
-      })}
-    </div>
+      <div className="footer__icons">
+        {links.map((link) => {
+          const href =
+            link.text.toLowerCase() === "email"
+              ? `mailto:${link.value}`
+              : link.value;
+
+          const isExternal = !href.startsWith("mailto:");
+          const Icon = getIcon(link.text);
+
+          return (
+            <a
+              key={link.text}
+              className="pill pill--icon"
+              href={href}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noreferrer" : undefined}
+              aria-label={link.text}
+              title={link.text}
+            >
+              {Icon ? (
+                <Icon className="iconBtn__icon" />
+              ) : (
+                <span>{link.text}</span>
+              )}
+            </a>
+          );
+        })}
+      </div>
+    </footer>
   );
 }
+
