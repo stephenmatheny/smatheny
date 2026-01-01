@@ -1,6 +1,7 @@
 export const profile = {
   firstName: "Stephen",
   lastName: "Matheny",
+  email: 'stephen@smatheny.com',
   headline: "Software Engineer building maintainable, data-driven web applications",
   location: "Texas",
   links: [
@@ -103,9 +104,44 @@ export const profile = {
     {
       name: "ChessQL",
       description:
-        "Platform for managing chess clubs, games, and player ratings.",
-      tech: ["Laravel", "React"],
+        "Platform for managing chess clubs, games, and player ratings with an emphasis on clean data modeling and workflow automation.",
+      tech: ["Laravel", "React", "MySQL"],
       // link: "https://www.chessql.com",
+    },
+    {
+      name: "Everyone’s Board",
+      description:
+        "Board game cataloging and tracking platform that allows users to manage collections, plays, and game metadata.",
+      tech: ["React", "Laravel", "PostgreSQL"],
+      // link: "https://www.everyonesboard.com",
+    },
+    {
+      name: "ArkAssess",
+      description:
+        "Assessment-building platform for educators that streamlines quiz creation, data collection, and instructional workflows.",
+      tech: ["Laravel", "React", "REST APIs"],
+      // link: "https://www.arkassess.com",
+    },
+    {
+      name: "InvArk",
+      description:
+        "Inventory and asset management system designed to track items, ownership, and lifecycle across organizations.",
+      tech: ["Laravel", "React", "PostgreSQL"],
+      // link: "https://www.invark.com",
+    },
+    {
+      name: "Google Apps Script Automations",
+      description:
+        "Custom Google Workspace automations for email cleanup, document generation, and workflow optimization.",
+      tech: ["Google Apps Script", "JavaScript", "Google APIs"],
+      // link: "https://github.com/stephenmatheny/google-apps-script-tools",
+    },
+    {
+      name: "Personal Resume Website",
+      description:
+        "Responsive, accessible resume website with subtle micro-interactions and performance-focused frontend design.",
+      tech: ["React", "Vite", "CSS"],
+      // link: "https://www.smatheny.com",
     },
   ],
 };

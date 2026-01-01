@@ -13,11 +13,7 @@ export default function App() {
   return (
     <Layout>
 
-      <Header
-        firstName={profile.firstName}
-        lastName={profile.lastName}
-        headline={profile.headline}
-      />
+      <Header profile={profile}/>
 
       <Section title="About" framed>
         <About />
