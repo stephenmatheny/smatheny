@@ -73,4 +73,4 @@ Feel free to reference the structure or patterns, but please do not reuse the co
 Contact
 GitHub: https://github.com/stephenmatheny
 
-LinkedIn: https://www.linkedin.com/in/stephenmatheny
+LinkedIn: https://www.linkedin.com/in/matheny-stephen
