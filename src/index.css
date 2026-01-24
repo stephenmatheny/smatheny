@@ -338,6 +338,15 @@ a:focus-visible {
   font-size: 1.05rem;
 }
 
+.experience__orgLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.experience__orgLink:hover .word {
+  text-decoration: underline;
+}
+
 .experience__dates {
   color: var(--text-muted);
   font-size: 0.9rem;

@@ -14,7 +14,27 @@ export default function Experience({ items }) {
           delay={index * 80}
         >
           <div className="experience__header">
-            <RevealWords as="h3" className="experience__org" text={exp.org} />
+            {exp.link ? (
+              <a
+                href={exp.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="experience__orgLink"
+              >
+                <RevealWords
+                  as="h3"
+                  className="experience__org"
+                  text={exp.org}
+                />
+              </a>
+            ) : (
+              <RevealWords
+                as="h3"
+                className="experience__org"
+                text={exp.org}
+              />
+            )}
+
             <RevealWords
               as="span"
               className="experience__dates"
@@ -22,6 +42,7 @@ export default function Experience({ items }) {
               delay={80}
             />
           </div>
+
 
           <RevealWords as="p" className="experience__role" text={exp.role} delay={120} />
 

@@ -21,6 +21,7 @@ export const profile = {
       org: "Solutions Arkitect",
       role: "Founder",
       dates: "Nov 2023 – Present",
+      link: "https://www.solutionsarkitect.com",
       summary:
         "Founded a nonprofit delivering production-ready web applications and math enrichment programs.",
       bullets: [
