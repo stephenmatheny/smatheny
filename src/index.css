@@ -12,6 +12,11 @@
   --pill-bg: rgba(255, 255, 255, 0.05);
   --pill-hover-bg: rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --ease-natural: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
+  --reveal-duration: 900ms;
+  --reveal-distance: 20px;
 }
 
 * { box-sizing: border-box; }
@@ -61,6 +66,22 @@ a:focus-visible {
 .container {
   width: min(980px, 92vw);
   margin: 0 auto;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition:
+    opacity var(--reveal-duration) var(--ease-natural),
+    transform var(--reveal-duration) var(--ease-natural);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* Scroll progress */
@@ -548,10 +569,15 @@ a:focus-visible {
   .progressBar,
   .surface,
   .btn,
-  .skillsMap * {
+  .skillsMap *,
+  .reveal {
     transition: none !important;
     transform: none !important;
     box-shadow: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
   }
 }
 

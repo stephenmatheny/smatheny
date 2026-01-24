@@ -1,10 +1,17 @@
+import Reveal from "./Reveal";
+
 export default function Experience({ items }) {
   if (!items || items.length === 0) return <p>No experience listed yet.</p>;
 
   return (
     <div className="stack">
-      {items.map((exp) => (
-        <article key={`${exp.org}:${exp.role}`} className="surface card card--soft">
+      {items.map((exp, index) => (
+        <Reveal
+          as="article"
+          key={`${exp.org}:${exp.role}`}
+          className="surface card card--soft"
+          delay={index * 80}
+        >
           <div className="experience__header">
             <h3 className="experience__org">{exp.org}</h3>
             <span className="experience__dates">{exp.dates}</span>
@@ -21,7 +28,7 @@ export default function Experience({ items }) {
               ))}
             </ul>
           ) : null}
-        </article>
+        </Reveal>
       ))}
     </div>
   );

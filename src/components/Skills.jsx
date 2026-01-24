@@ -1,12 +1,19 @@
+import Reveal from "./Reveal";
+
 export default function Skills({ skillGroups }) {
   if (!skillGroups || skillGroups.length === 0) {
-    return <p>No skills listed yet.</p>
+    return <p>No skills listed yet.</p>;
   }
 
   return (
     <div className="skills">
-      {skillGroups.map((group) => (
-        <div key={group.name} className="surface skills__group">
+      {skillGroups.map((group, index) => (
+        <Reveal
+          as="div"
+          key={group.name}
+          className="surface skills__group"
+          delay={index * 70}
+        >
           <h3 className="skills__title">{group.name}</h3>
 
           {Array.isArray(group.items) && group.items.length > 0 ? (
@@ -20,7 +27,7 @@ export default function Skills({ skillGroups }) {
           ) : (
             <p className="skills__empty">No items.</p>
           )}
-        </div>
+        </Reveal>
       ))}
     </div>
   );

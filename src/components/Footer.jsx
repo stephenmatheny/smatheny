@@ -1,5 +1,7 @@
 // src/components/Contact.jsx
 
+import Reveal from "./Reveal";
+
 function IconPhone(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -67,18 +69,19 @@ export default function Footer({ links }) {
   }
 
   return (
-    <footer className="footer">
+    <Reveal as="footer" className="footer">
       <p className="footer__label">Contact</p>
 
       <div className="footer__icons">
-        {links.map((link) => {
+        {links.map((link, index) => {
           const href = getHref(link.text, link.value);
 
           const isExternal = !href.startsWith("mailto:") && !href.startsWith("tel:");
           const Icon = getIcon(link.text);
 
           return (
-            <a
+            <Reveal
+              as="a"
               key={link.text}
               className="pill pill--icon"
               href={href}
@@ -86,17 +89,17 @@ export default function Footer({ links }) {
               rel={isExternal ? "noreferrer" : undefined}
               aria-label={link.text}
               title={link.text}
+              delay={index * 60}
             >
               {Icon ? (
                 <Icon className="iconBtn__icon" />
               ) : (
                 <span>{link.text}</span>
               )}
-            </a>
+            </Reveal>
           );
         })}
       </div>
-    </footer>
+    </Reveal>
   );
 }
-

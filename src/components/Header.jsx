@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import Reveal from "./Reveal";
 
 export default function Header({ profile }) {
   const [copied, setCopied] = useState(false);
@@ -28,7 +29,7 @@ export default function Header({ profile }) {
   };
 
   return (
-    <header className="surface hero">
+    <Reveal as="header" className="surface hero">
       <h1 className="hero__name">
         {profile.firstName}{" "}
         <span className="hero__last">{profile.lastName}</span>
@@ -92,6 +93,6 @@ export default function Header({ profile }) {
           </>
         )}
       </div>
-    </header>
+    </Reveal>
   );
 }
