@@ -46,6 +46,7 @@ function IconLinkedIn(props) {
 }
 
 function getHref(text, value) {
+  const t = (text ?? "").toLowerCase();
   if (text.toLowerCase() === "email") return `mailto:${value}`;
   if (t === "phone") return `tel:${value}`;
   return value;
