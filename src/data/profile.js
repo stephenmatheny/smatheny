@@ -35,6 +35,7 @@ export const profile = {
       org: "NCS Credit",
       role: "Software Engineer",
       dates: "Aug 2022 – Sept 2025",
+      link: "https://www.ncscredit.com",
       summary:
         "Developed and maintained enterprise software supporting financial and credit processing workflows.",
       bullets: [
@@ -47,6 +48,7 @@ export const profile = {
     {
       org: "friEdTech",
       role: "Software Engineer",
+      link: "https://www.friedtechnology.com",
       dates: "Dec 2021 – Jul 2022",
       summary:
         "Built education technology platforms used by K–12 school districts.",
@@ -68,20 +70,21 @@ export const profile = {
         "Shipped production-ready solutions based on client specifications",
       ],
     },
-    {
-      org: "Lufkin Middle School",
-      role: "Coding & Robotics Teacher",
-      dates: "Aug 2025 – Dec 2025",
-      summary:
-        "Taught computer science and robotics with an emphasis on foundational programming and problem-solving.",
-      bullets: [
-        "Introduced students to programming concepts including variables, conditionals, and loops",
-        "Designed hands-on robotics and coding projects to reinforce computational thinking",
-      ],
-    },
+    // {
+    //   org: "Lufkin Middle School",
+    //   role: "Coding & Robotics Teacher",
+    //   dates: "Aug 2025 – Dec 2025",
+    //   summary:
+    //     "Taught computer science and robotics with an emphasis on foundational programming and problem-solving.",
+    //   bullets: [
+    //     "Introduced students to programming concepts including variables, conditionals, and loops",
+    //     "Designed hands-on robotics and coding projects to reinforce computational thinking",
+    //   ],
+    // },
     {
       org: "Hudson Middle School",
       role: "Computer Science, CAD & Math Teacher",
+      link: "https://www.hudsonisd.org",
       dates: "Aug 2017 – Aug 2021",
       summary:
         "Delivered CS, CAD, and math instruction emphasizing logic and analytical reasoning.",
@@ -94,6 +97,7 @@ export const profile = {
       org: "Livingston Junior High School",
       role: "Math Teacher",
       dates: "Aug 2015 – Aug 2017",
+      link: "https://www.livingstonisd.com",
       summary:
         "Provided middle school mathematics instruction focused on conceptual understanding.",
       bullets: [
