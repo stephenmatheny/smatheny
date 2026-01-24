@@ -4,6 +4,7 @@ export const profile = {
   email: 'stephen@smatheny.com',
   headline: "Software Engineer building maintainable, data-driven web applications",
   location: "Texas",
+  phone: "4692657880",
   links: [
     { text: "Email", value: "stephen@smatheny.com" },
     { text: "GitHub", value: "https://github.com/stephenmatheny" },

@@ -1,5 +1,17 @@
 // src/components/Contact.jsx
 
+function IconPhone(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fill="currentColor"
+        d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.59a1 1 0 0 1-.25 1.01l-2.2 2.19Z"
+      />
+    </svg>
+  );
+}
+
+
 function IconEmail(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -35,11 +47,13 @@ function IconLinkedIn(props) {
 
 function getHref(text, value) {
   if (text.toLowerCase() === "email") return `mailto:${value}`;
+  if (t === "phone") return `tel:${value}`;
   return value;
 }
 
 function getIcon(text) {
   const t = text.toLowerCase();
+  if (t === "phone") return IconPhone;
   if (t === "email") return IconEmail;
   if (t === "github") return IconGithub;
   if (t === "linkedin") return IconLinkedIn;
@@ -57,12 +71,9 @@ export default function Footer({ links }) {
 
       <div className="footer__icons">
         {links.map((link) => {
-          const href =
-            link.text.toLowerCase() === "email"
-              ? `mailto:${link.value}`
-              : link.value;
+          const href = getHref(link.text, link.value);
 
-          const isExternal = !href.startsWith("mailto:");
+          const isExternal = !href.startsWith("mailto:") && !href.startsWith("tel:");
           const Icon = getIcon(link.text);
 
           return (
