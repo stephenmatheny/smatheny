@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import RevealWords from "./RevealWords";
 
 export default function Skills({ skillGroups }) {
   if (!skillGroups || skillGroups.length === 0) {
@@ -14,7 +15,7 @@ export default function Skills({ skillGroups }) {
           className="surface skills__group"
           delay={index * 70}
         >
-          <h3 className="skills__title">{group.name}</h3>
+          <RevealWords as="h3" className="skills__title" text={group.name} />
 
           {Array.isArray(group.items) && group.items.length > 0 ? (
             <ul className="pillList skills__list">

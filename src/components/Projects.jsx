@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import RevealWords from "./RevealWords";
 
 export default function Projects({ projects }) {
   if (!projects || projects.length === 0) return <p>No projects yet.</p>;
@@ -21,13 +22,18 @@ export default function Projects({ projects }) {
           >
             {hasLink ? (
               <a className="card__titleLink" href={project.link} target="_blank" rel="noreferrer">
-                <h3 className="card__title">{project.name}</h3>
+                <RevealWords as="h3" className="card__title" text={project.name} />
               </a>
             ) : (
-              <h3 className="card__title">{project.name}</h3>
+              <RevealWords as="h3" className="card__title" text={project.name} />
             )}
 
-            <p className="card__desc">{project.description}</p>
+            <RevealWords
+              as="p"
+              className="card__desc"
+              text={project.description}
+              delay={90}
+            />
 
             {tech.length > 0 ? (
               <ul className="pillList tags">

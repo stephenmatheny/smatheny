@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import Reveal from "./Reveal";
+import RevealWords from "./RevealWords";
 
 export default function Header({ profile }) {
   const [copied, setCopied] = useState(false);
@@ -30,12 +31,18 @@ export default function Header({ profile }) {
 
   return (
     <Reveal as="header" className="surface hero">
-      <h1 className="hero__name">
-        {profile.firstName}{" "}
-        <span className="hero__last">{profile.lastName}</span>
-      </h1>
+      <RevealWords
+        as="h1"
+        className="hero__name"
+        text={`${profile.firstName} ${profile.lastName}`}
+      />
 
-      <p className="hero__headline">{profile.headline}</p>
+      <RevealWords
+        as="p"
+        className="hero__headline"
+        text={profile.headline}
+        delay={90}
+      />
 
       <div className="hero__actions">
         <a

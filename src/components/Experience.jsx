@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import RevealWords from "./RevealWords";
 
 export default function Experience({ items }) {
   if (!items || items.length === 0) return <p>No experience listed yet.</p>;
@@ -13,11 +14,16 @@ export default function Experience({ items }) {
           delay={index * 80}
         >
           <div className="experience__header">
-            <h3 className="experience__org">{exp.org}</h3>
-            <span className="experience__dates">{exp.dates}</span>
+            <RevealWords as="h3" className="experience__org" text={exp.org} />
+            <RevealWords
+              as="span"
+              className="experience__dates"
+              text={exp.dates}
+              delay={80}
+            />
           </div>
 
-          <p className="experience__role">{exp.role}</p>
+          <RevealWords as="p" className="experience__role" text={exp.role} delay={120} />
 
           {exp.summary ? <p className="experience__summary">{exp.summary}</p> : null}
 
