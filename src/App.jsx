@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
@@ -31,6 +32,7 @@ export default function App() {
         <Projects projects={profile.projects} />
       </Section>
 
+      <Analytics />
     </Layout>
   );
 }
