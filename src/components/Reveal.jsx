@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { createElement, useEffect, useRef } from "react";
 
 export default function Reveal({
   as: Component = "div",
@@ -57,10 +57,11 @@ export default function Reveal({
   }, [delay]);
 
   const classes = className ? `reveal ${className}` : "reveal";
+  const elementProps = { className: classes, ...props };
 
-  return (
-    <Component ref={ref} className={classes} {...props}>
-      {children}
-    </Component>
-  );
+  if (typeof Component === "string") {
+    elementProps.ref = ref;
+  }
+
+  return createElement(Component, elementProps, children);
 }

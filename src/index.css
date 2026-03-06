@@ -544,6 +544,353 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+/* Tutoring page */
+.tutoringHero {
+  padding: 1.4rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.tutoringHero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tutoringHero__kicker {
+  margin: 0 0 0.55rem;
+  color: rgba(167, 220, 191, 0.95);
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tutoringHero__title {
+  margin: 0;
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  line-height: 1.12;
+}
+
+.tutoringHero__lead {
+  margin: 0.85rem 0 0;
+  color: var(--text-soft);
+  max-width: 64ch;
+  font-size: 1.03rem;
+}
+
+.tutoringHero__support {
+  margin: 0.65rem 0 0;
+  color: var(--text-muted);
+  max-width: 64ch;
+}
+
+.tutoringHero__actions {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.tutoringImage {
+  margin: 0;
+  min-height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(135deg, rgba(147, 197, 253, 0.2), rgba(16, 185, 129, 0.18)),
+    rgba(11, 18, 32, 0.45);
+}
+
+.tutoringImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tutoringImage__fallback {
+  min-height: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.tutoringImage__fallback span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: rgba(11, 18, 32, 0.44);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.tutoringAbout,
+.tutoringWho {
+  display: grid;
+  grid-template-columns: 0.82fr 1.2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tutoringAbout__copy p,
+.tutoringWho__content p {
+  margin: 0.55rem 0;
+  color: var(--text-soft);
+}
+
+.tutoringSubjects {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.tutoringSubjects__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.9rem;
+}
+
+.tutoringSubjectCard {
+  padding: 0.95rem;
+}
+
+.tutoringSubjectCard__title {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-strong);
+}
+
+.tutoringSubjectCard__list {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.tutoringSubjectCard__list li {
+  margin: 0.3rem 0;
+  color: var(--text-soft);
+}
+
+.tutoringWho__list {
+  margin: 0.85rem 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.tutoringWho__list li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--text-soft);
+}
+
+.tutoringWho__list li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  background: rgba(147, 197, 253, 0.85);
+}
+
+.tutoringValueGrid,
+.tutoringTestimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.tutoringValueCard {
+  padding: 1rem;
+}
+
+.tutoringValueCard__title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.tutoringValueCard__description {
+  margin: 0.55rem 0 0;
+  color: var(--text-soft);
+}
+
+.tutoringTestimonials {
+  display: grid;
+  gap: 1rem;
+}
+
+.tutoringTestimonials__intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tutoringTestimonials__intro p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.tutoringTestimonial {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.tutoringTestimonial__quote {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.tutoringTestimonial__meta {
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  padding-top: 0.65rem;
+}
+
+.tutoringTestimonial__rating {
+  margin: 0 0 0.35rem;
+  color: #fcd34d;
+  letter-spacing: 0.08em;
+  font-size: 0.86rem;
+}
+
+.tutoringTestimonial__reviewer {
+  margin: 0;
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.tutoringTestimonial__relationship {
+  margin: 0.12rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.tutoringCTA {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.tutoringCTA__title {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.7vw, 1.8rem);
+}
+
+.tutoringCTA__text {
+  margin: 0.7rem auto 0;
+  max-width: 62ch;
+  color: var(--text-soft);
+}
+
+.tutoringCTA__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.tutoringInquiry {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.tutoringInquiry__intro {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.tutoringInquiry__embed {
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow);
+}
+
+.tutoringInquiry__iframe {
+  display: block;
+  width: 100%;
+  height: clamp(760px, 88vh, 980px);
+  min-height: 760px;
+  border: 0;
+  background: #ffffff;
+  color-scheme: light;
+}
+
+.tutoringInquiry__form {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tutoringInquiry__field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.tutoringInquiry__field input,
+.tutoringInquiry__field select,
+.tutoringInquiry__field textarea {
+  width: 100%;
+  background: rgba(9, 14, 26, 0.52);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.tutoringInquiry__field input::placeholder,
+.tutoringInquiry__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.tutoringInquiry__field input:focus-visible,
+.tutoringInquiry__field select:focus-visible,
+.tutoringInquiry__field textarea:focus-visible {
+  outline: 2px solid rgba(147, 197, 253, 0.75);
+  outline-offset: 1px;
+}
+
+.tutoringInquiry__field--full {
+  grid-column: 1 / -1;
+}
+
+.tutoringInquiry__submit {
+  width: fit-content;
+}
+
+.tutoringInquiry__status {
+  margin: 0;
+  color: #a7f3d0;
+}
+
 /* Footer */
 .footer {
   margin-top: 4rem;
@@ -564,12 +911,32 @@ a:focus-visible {
   .page { padding: 3rem 1.25rem; }
   .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .section { margin: 1.75rem 0; }
+  .tutoringHero {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .tutoringAbout,
+  .tutoringWho {
+    grid-template-columns: 1fr;
+  }
+  .tutoringSubjects,
+  .tutoringTestimonials__intro {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
   .hero { padding: 1.25rem 1rem; }
   .experience__header { flex-direction: column; align-items: flex-start; }
   .experience__dates { white-space: normal; }
+  .tutoringInquiry__form { grid-template-columns: 1fr; }
+  .tutoringInquiry__field--full { grid-column: auto; }
+  .tutoringInquiry__submit { width: 100%; }
+  .tutoringImage { min-height: 200px; }
+  .tutoringInquiry__iframe {
+    height: clamp(720px, 95vh, 900px);
+    min-height: 720px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -591,6 +958,15 @@ a:focus-visible {
   .skillsMap__itemLabel { font-size: 9px; }
 
   .btn { width: 100%; justify-content: center; }
+  .tutoringHero {
+    padding: 1rem;
+  }
+  .tutoringCTA {
+    padding: 1rem;
+  }
+  .tutoringImage__fallback span {
+    font-size: 0.85rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

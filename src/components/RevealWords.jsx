@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { createElement, useEffect, useMemo, useRef } from "react";
 
 function splitWords(text) {
   // Keep spaces as separate tokens so spacing stays identical
@@ -64,19 +64,24 @@ export default function RevealWords({
   const classes = className
     ? `reveal reveal-words ${className}`
     : "reveal reveal-words";
+  const elementProps = { className: classes, ...props };
 
-  return (
-    <Component ref={ref} className={classes} {...props}>
-      {tokens.map((tok, idx) =>
-        tok.trim() === "" ? (
-          // preserve spaces
-          <span key={`s-${idx}`}>{tok}</span>
-        ) : (
-          <span key={`w-${idx}`} className="word" style={{ "--i": idx }}>
-            {tok}
-          </span>
-        )
-      )}
-    </Component>
+  if (typeof Component === "string") {
+    elementProps.ref = ref;
+  }
+
+  return createElement(
+    Component,
+    elementProps,
+    tokens.map((tok, idx) =>
+      tok.trim() === "" ? (
+        // preserve spaces
+        <span key={`s-${idx}`}>{tok}</span>
+      ) : (
+        <span key={`w-${idx}`} className="word" style={{ "--i": idx }}>
+          {tok}
+        </span>
+      )
+    )
   );
 }

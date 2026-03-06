@@ -1,36 +1,18 @@
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Header from "./components/Header";
-import Layout from "./components/Layout";
-import Projects from "./components/Projects";
-import Section from "./components/Section";
-import Skills from "./components/Skills";
-import { profile } from "./data/profile";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import TutoringPage from "./pages/TutoringPage";
 
 import "./App.css";
 
 export default function App() {
   return (
-    <Layout>
-
-      <Header profile={profile}/>
-
-      <Section title="About" framed>
-        <About />
-      </Section>
-
-      <Section title="Skills">
-        <Skills skillGroups={profile.skillGroups} />
-      </Section>
-
-      <Section title="Experience">
-        <Experience items={profile.experience} />
-      </Section>
-
-      <Section title="Projects">
-        <Projects projects={profile.projects} />
-      </Section>
-
-    </Layout>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/tutoring" element={<TutoringPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
