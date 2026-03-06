@@ -80,15 +80,15 @@ const contactEmail = profile.email || "stephen@smatheny.com";
 
 const tutoringImages = {
   // A friendly tutoring scene with a student and tutor working on math together.
-  hero: "src/assets/images/student-learning-math-with-tutor.png",
+  hero: "public/images/student-learning-math-with-tutor.png",
   // Professional but friendly photo of Stephen Matheny.
-  about: "src/assets/images/stephen-matheny-tutor.jpg",
+  about: "public/images/stephen-matheny-tutor.jpg",
   // Student studying math with notebook and calculator.
-  subjects: "src/assets/images/math-notebook-study.png",
+  subjects: "public/images/math-notebook-study.png",
   // Student successfully solving a math problem and smiling.
-  whoIHelp: "src/assets/images/student-smiling-after-solving-problem.png",
+  whoIHelp: "public/images/student-smiling-after-solving-problem.png",
   // Parent helping student with homework at a table.
-  testimonials: "src/assets/images/parent-student-learning.png",
+  testimonials: "public/images/parent-student-learning.png",
 };
 
 function TutoringImage({ src, alt, fallbackLabel, className = "" }) {
