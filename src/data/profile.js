@@ -7,6 +7,8 @@ export const profile = {
   phone: "4692657880",
   links: [
     { text: "Email", value: "stephen@smatheny.com" },
+    { text: "Phone", value: "469-265-7880" },
+    { text: "Facebook", value: "https://facebook.com/share/1Eiucvgsir" },
     { text: "GitHub", value: "https://github.com/stephenmatheny" },
     { text: "LinkedIn", value: "https://www.linkedin.com/in/matheny-stephen/" },
   ],

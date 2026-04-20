@@ -1,17 +1,22 @@
 import Footer from "./Footer";
+import SiteNav from "./SiteNav";
 import ScrollProgress from "./ScrollProgress";
 import { profile } from "../data/profile";
 import { Analytics } from "@vercel/analytics/react";
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageClassName = "" }) {
+  const pageClasses = pageClassName ? `page ${pageClassName}` : "page";
+
   return (
-    <div className="page">
+    <div className={pageClasses}>
       <ScrollProgress />
-      <main className="container">{children}</main>
+      <SiteNav />
+      <div className="container">
+        <main>{children}</main>
+        <Footer links={profile.links} />
+      </div>
 
       <Analytics />
-      
-      <Footer links={profile.links} />
     </div>
   );
 }

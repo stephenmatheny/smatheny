@@ -47,9 +47,20 @@ function IconLinkedIn(props) {
   );
 }
 
+function IconFacebook(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fill="currentColor"
+        d="M13.62 21v-8.08h2.72l.41-3.15h-3.13V7.76c0-.91.25-1.53 1.56-1.53H16.7V3.41c-.26-.04-1.17-.11-2.22-.11-2.19 0-3.69 1.34-3.69 3.81v2.66H8.31v3.15h2.48V21h2.83Z"
+      />
+    </svg>
+  );
+}
+
 function getHref(text, value) {
   const t = (text ?? "").toLowerCase();
-  if (text.toLowerCase() === "email") return `mailto:${value}`;
+  if (t === "email") return `mailto:${value}`;
   if (t === "phone") return `tel:${value}`;
   return value;
 }
@@ -60,6 +71,7 @@ function getIcon(text) {
   if (t === "email") return IconEmail;
   if (t === "github") return IconGithub;
   if (t === "linkedin") return IconLinkedIn;
+  if (t === "facebook") return IconFacebook;
   return null;
 }
 
