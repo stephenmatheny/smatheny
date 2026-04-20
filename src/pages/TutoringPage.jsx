@@ -10,6 +10,7 @@ const subjectGroups = [
   {
     name: "Elementary",
     items: ["K-5th Grade", "Arithmetic", "Fractions", "Pre-Algebra"],
+    price: "$55 per hour",
   },
   {
     name: "Middle & High School",
@@ -21,23 +22,18 @@ const subjectGroups = [
       "Precalculus",
       "Statistics",
     ],
+    price: "$65 per hour",
   },
   {
     name: "College",
     items: ["College Algebra", "Trigonometry", "Statistics", "Calculus"],
+    price: "$75 per hour",
   },
   {
     name: "Computers",
     items: ["Basics: Docs, Sheets, etc", "Beginner Web Development: HTML, CSS, Javascript", "Advanced Web Development: React, Laravel, SQL", "Computer Aided Design (CAD)"],
+    price: "$75 per hour",
   },
-];
-
-const whoIHelp = [
-  "Students struggling with math",
-  "Students who need stronger foundations",
-  "Students preparing for quizzes or exams",
-  "Students needing help with homework",
-  "Students wanting to gain confidence in math",
 ];
 
 const valuePoints = [
@@ -59,6 +55,24 @@ const valuePoints = [
     title: "Real-World Perspective",
     description:
       "My engineering background helps connect math ideas to practical examples students can relate to.",
+  },
+];
+
+const discountOptions = [
+  {
+    title: "Referral Thank-You",
+    description:
+      "If someone books after you send them my way, ask about a referral discount on a future session.",
+  },
+  {
+    title: "Sibling and Small-Group Options",
+    description:
+      "Families with multiple students can reach out about discounted options when students are working at a similar level.",
+  },
+  {
+    title: "Recurring Session Savings",
+    description:
+      "If your student needs steady weekly support, I am happy to talk through longer-term scheduling and budget-friendly options.",
   },
 ];
 
@@ -136,7 +150,32 @@ export default function TutoringPage() {
           </div>
         </Reveal>
 
-        <Section title="Subjects Offered">
+
+
+        <Section title="Referrals & Discounts">
+          <div className="tutoringValueGrid">
+            {discountOptions.map((option, index) => (
+              <Reveal
+                as="article"
+                key={option.title}
+                className="surface tutoringPerkCard"
+                delay={index * 60}
+              >
+                <div className="tutoringPerkCard__header">
+                  <CheckIcon className="tutoringPerkCard__icon" />
+                  <h3 className="tutoringPerkCard__title">{option.title}</h3>
+                </div>
+                <p className="tutoringPerkCard__description">{option.description}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className="tutoringSectionNote">
+            Every family&apos;s situation is a little different, so reach out if you want help finding the best fit for your student and schedule.
+          </p>
+        </Section>
+
+        <Section title="Subjects Offered" id="subjects-offered">
           <div className="tutoringSubjectGrid">
             {subjectGroups.map((group, index) => (
               <Reveal
@@ -145,10 +184,16 @@ export default function TutoringPage() {
                 className="surface tutoringSubjectCard"
                 delay={index * 70}
               >
-                <h3 className="tutoringSubjectCard__title">{group.name}</h3>
+                <div className="tutoringSubjectCard__header">
+                  <h3 className="tutoringSubjectCard__title">{group.name}</h3>
+                  <p className="tutoringSubjectCard__price">{group.price}</p>
+                </div>
                 <ul className="tutoringSubjectCard__list">
                   {group.items.map((item) => (
-                    <li key={`${group.name}:${item}`}>{item}</li>
+                    <li key={`${group.name}:${item}`}>
+                      <CheckIcon className="tutoringSubjectCard__check" />
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </Reveal>
@@ -167,12 +212,14 @@ export default function TutoringPage() {
         <Section title="Book a Session" framed>
           <div id="tutoring-booking" className="tutoringInquiry">
             <p className="tutoringInquiry__intro">
-              Choose a time that works best for you using the booking calendar below. If you prefer, you can also email me directly below.
-
-              <a href={`mailto:${contactEmail}`} className="btn">
-                Email Me
-              </a>
+              Choose a time that works best for you using the booking calendar below or contact me.
             </p>
+
+
+
+            <a href="#subjects-offered" className="btn btn--primary">
+              See Pricing
+            </a>
 
             <div className="tutoringInquiry__embed">
               <iframe
@@ -187,11 +234,8 @@ export default function TutoringPage() {
           </div>
         </Section>
 
-
-
         <Section title="How I Help">
           <div className="tutoringSupportLayout">
-
             <div className="tutoringValueGrid">
               {valuePoints.map((point, index) => (
                 <Reveal
@@ -200,7 +244,10 @@ export default function TutoringPage() {
                   className="surface tutoringValueCard"
                   delay={index * 60}
                 >
-                  <h3 className="tutoringValueCard__title">{point.title}</h3>
+                  <div className="tutoringValueCard__header">
+                    <CheckIcon className="tutoringValueCard__icon" />
+                    <h3 className="tutoringValueCard__title">{point.title}</h3>
+                  </div>
                   <p className="tutoringValueCard__description">
                     {point.description}
                   </p>
@@ -209,10 +256,10 @@ export default function TutoringPage() {
             </div>
           </div>
         </Section>
-        
-            <a href="#tutoring-booking" className="btn btn--primary">
-              Book Now
-            </a>
+
+        <a href="#tutoring-booking" className="btn btn--primary">
+          Book Now
+        </a>
       </div>
     </Layout>
   );
