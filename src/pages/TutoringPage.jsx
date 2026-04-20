@@ -235,29 +235,27 @@ export default function TutoringPage() {
         </Section>
 
         <Section title="How I Help">
-          <div className="tutoringSupportLayout">
-            <div className="tutoringValueGrid">
-              {valuePoints.map((point, index) => (
-                <Reveal
-                  as="article"
-                  key={point.title}
-                  className="surface tutoringValueCard"
-                  delay={index * 60}
-                >
-                  <div className="tutoringValueCard__header">
-                    <CheckIcon className="tutoringValueCard__icon" />
-                    <h3 className="tutoringValueCard__title">{point.title}</h3>
-                  </div>
-                  <p className="tutoringValueCard__description">
-                    {point.description}
-                  </p>
-                </Reveal>
-              ))}
-            </div>
+          <div className="tutoringValueGrid">
+            {valuePoints.map((point, index) => (
+              <Reveal
+                as="article"
+                key={point.title}
+                className="surface tutoringValueCard"
+                delay={index * 60}
+              >
+                <div className="tutoringValueCard__header">
+                  <CheckIcon className="tutoringValueCard__icon" />
+                  <h3 className="tutoringValueCard__title">{point.title}</h3>
+                </div>
+                <p className="tutoringValueCard__description">
+                  {point.description}
+                </p>
+              </Reveal>
+            ))}
           </div>
         </Section>
 
-        <a href="#tutoring-booking" className="btn btn--primary">
+        <a href="#tutoring-booking" className="btn btn--primary tutoringPage__cta">
           Book Now
         </a>
       </div>

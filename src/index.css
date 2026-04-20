@@ -1426,13 +1426,6 @@ a:focus-visible {
   margin: 0.55rem 0 0;
 }
 
-.tutoringSupportLayout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 1rem;
-  align-items: start;
-}
-
 .tutoringSupportCard__lead {
   margin: 0.6rem 0 0;
 }
@@ -1447,6 +1440,11 @@ a:focus-visible {
 
 .tutoringValueCard__description {
   margin: 0.55rem 0 0;
+}
+
+.tutoringPage__cta {
+  justify-self: start;
+  margin-top: 0.7rem;
 }
 
 .tutoringRibbon {
@@ -1496,11 +1494,9 @@ a:focus-visible {
 .tutoringInquiry__iframe {
   display: block;
   width: 100%;
-  height: clamp(760px, 88vh, 980px);
-  min-height: 760px;
+  height: 760px;
   border: 0;
   background: #ffffff;
-  color-scheme: light;
 }
 
 /* Footer */
@@ -1548,8 +1544,7 @@ a:focus-visible {
       "aside";
   }
 
-  .aboutProfile,
-  .tutoringSupportLayout {
+  .aboutProfile {
     grid-template-columns: 1fr;
   }
 
@@ -1560,6 +1555,9 @@ a:focus-visible {
 
   .tutoringRibbon__actions {
     justify-content: flex-start;
+  }
+  .tutoringInquiry__iframe {
+    height: 1350px;
   }
 }
 
@@ -1671,10 +1669,6 @@ a:focus-visible {
 
   .tutoringImage { min-height: 200px; }
   .tutoringCharacter { min-height: 260px; }
-  .tutoringInquiry__iframe {
-    height: max(1320px, 170vh);
-    min-height: 1320px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -1691,11 +1685,6 @@ a:focus-visible {
 
   .card { padding: 0.9rem; }
   .card--soft { padding: 1rem; }
-
-  .tutoringInquiry__iframe {
-    height: max(1480px, 190vh);
-    min-height: 1480px;
-  }
 
   .skillsMap__groupLabel { font-size: 11px; }
   .skillsMap__itemLabel { font-size: 9px; }
